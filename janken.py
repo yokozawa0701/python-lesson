@@ -1,8 +1,8 @@
 print('じゃんけんスタート')
 print('自分の手を入力してください')
 
-my_hand = 1
-enemy_hand = 2
+my_hand = 2
+enemy_hand = 0
 
 if my_hand == 0:
   if enemy_hand == 0:
@@ -17,4 +17,7 @@ elif my_hand == 1:
   elif enemy_hand == 1:
     print('あいこ')
   elif enemy_hand == 2:
+    print('勝ち')
+elif my_hand == 2:
+  if enemy_hand == 0:
     print('勝ち')
