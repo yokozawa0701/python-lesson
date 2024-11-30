@@ -3,7 +3,7 @@ import random
 print('じゃんけんスタート')
 print('自分の手を入力してください')
 
-my_hand = input()
+my_hand = input('0:グー, 1:チョキ, 2:パー')
 enemy_hand = random.randint(0, 2)
 
 if my_hand == 0:
