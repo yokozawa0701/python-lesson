@@ -1,5 +1,7 @@
 import random
+from datetime import date
 
+print(date.today())
 print('じゃんけんスタート')
 print('自分の手を入力してください')
 
