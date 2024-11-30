@@ -6,24 +6,11 @@ print('自分の手を入力してください')
 my_hand = int(input('0:グー, 1:チョキ, 2:パー'))
 enemy_hand = random.randint(0, 2)
 
-if my_hand == 0:
-  if enemy_hand == 0:
-    print('あいこ')
-  elif enemy_hand == 1:
-    print('勝ち')
-  elif enemy_hand == 2:
-    print('負け')
-elif my_hand == 1:
-  if enemy_hand == 0:
-    print('負け')
-  elif enemy_hand == 1:
-    print('あいこ')
-  elif enemy_hand == 2:
-    print('勝ち')
-elif my_hand == 2:
-  if enemy_hand == 0:
-    print('勝ち')
-  elif enemy_hand == 1:
-    print('負け')
-  elif enemy_hand == 2:
-    print('あいこ')
+result = my_hand - enemy_hand
+
+if result == 0:
+  print('あいこ')
+elif result == -1 or result == 2:
+  print('勝ち')
+else:
+  print('負け')
