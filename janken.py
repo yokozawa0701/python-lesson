@@ -24,14 +24,16 @@ def view_result(my_hand, enemy_hand):
   result = my_hand - enemy_hand
   if result == 0:
     print('あいこ')
+    play()
   elif result == -1 or result == 2:
     print('勝ち')
   else:
     print('負け')
 
+def play():
+  my_hand = get_my_hand()
+  enemy_hand = get_you_hand()
+  view_result(my_hand, enemy_hand)
+
 start_message()
-
-my_hand = get_my_hand()
-enemy_hand = get_you_hand()
-
-view_result(my_hand, enemy_hand)
+play()
