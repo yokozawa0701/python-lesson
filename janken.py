@@ -1,18 +1,29 @@
 import random
 from datetime import date
 
-print(date.today())
-print('じゃんけんスタート')
-print('自分の手を入力してください')
+def start_message():
+  print(date.today())
+  print('じゃんけんスタート')
 
-my_hand = int(input('0:グー, 1:チョキ, 2:パー'))
-enemy_hand = random.randint(0, 2)
+def get_my_hand():
+  print('自分の手を入力してください')
+  return int(input('0:グー, 1:チョキ, 2:パー'))
 
-result = my_hand - enemy_hand
+def get_you_hand():
+  return random.randint(0, 2)
 
-if result == 0:
-  print('あいこ')
-elif result == -1 or result == 2:
-  print('勝ち')
-else:
-  print('負け')
+def view_result(my_hand, enemy_hand):
+  result = my_hand - enemy_hand
+  if result == 0:
+    print('あいこ')
+  elif result == -1 or result == 2:
+    print('勝ち')
+  else:
+    print('負け')
+
+start_message()
+
+my_hand = get_my_hand()
+enemy_hand = get_you_hand()
+
+view_result(my_hand, enemy_hand)
